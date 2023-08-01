@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Department;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,20 @@ class DepartmentSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $departments = [
+            'Cardiology',
+            'Neurology',
+            'Orthopedics',
+            'General-surgery',
+            'Oncology',
+            'Operating-room',
+            'Emergency',
+        ];
+
+        foreach ($departments as $department) {
+            $obj = new Department();
+            $obj->name = $department;
+            $obj->save();
+        }
     }
 }
