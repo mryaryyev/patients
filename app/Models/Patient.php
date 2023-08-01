@@ -14,6 +14,7 @@ class Patient extends Model
     ];
 
     public $timestamps = false;
+
 }
 
 
